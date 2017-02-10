@@ -45,12 +45,12 @@
 <p><em>A single tool to manage your storage.</em></p>
 <table class="contentstable" align="center" style="margin-left: 30px"><tr>
   <td width="50%">
-    <p class="biglink"><a class="biglink" href="http://sourceforge.net/projects/storagemanager/files/">Download</a><br/>
+    <p class="biglink"><a class="biglink" href="https://github.com/system-storage-manager/ssm/releases/">Download</a><br/>
        <span class="linkdescr">download stable release</span></p>
     <p class="biglink"><a class="biglink" href="#quick-examples">Examples</a><br/>
        <span class="linkdescr">see example usage</span></p>
   </td><td width="50%">
-    <p class="biglink"><a class="biglink" href="http://sourceforge.net/p/storagemanager/code/">Get the code</a><br/>
+    <p class="biglink"><a class="biglink" href="https://github.com/system-storage-manager/ssm/">Get the code</a><br/>
        <span class="linkdescr">checkout recent code from git repository</span></p>
     <p class="biglink"><a class="biglink" href="#for-developers">Contribute</a><br/>
        <span class="linkdescr">contribute to the project</span></p>
@@ -75,8 +75,7 @@ in general.</p>
 </div>
 <span id="document-src/download"></span><div class="section" id="download">
 <h2>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h2>
-<p>You can get System Storage Manager from the git repository on SourceForge
-project page <a class="reference external" href="http://sourceforge.net/p/storagemanager/code/">http://sourceforge.net/p/storagemanager/code/</a>. There are two
+<p>You can get System Storage Manager from the git repository on GitHub project page <a class="reference external" href="https://github.com/system-storage-manager/ssm/releases/">https://github.com/system-storage-manager/ssm/releases/</a>. There are two
 branches: <code class="docutils literal"><span class="pre">master</span></code> which contains the stable release and <code class="docutils literal"><span class="pre">devel</span></code> where
 the development is happening. Once in a while the <code class="docutils literal"><span class="pre">devel</span></code> branch is
 merged into <code class="docutils literal"><span class="pre">master</span></code>, releasing new version of System Storage Manager.
@@ -85,13 +84,14 @@ as stable as the <code class="docutils literal"><span class="pre">master</span><
 regression testing suite, so we&#8217;re trying hard not to break things that
 already work.</p>
 <p>You can check out the <code class="docutils literal"><span class="pre">master</span></code> branch of the git repository:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="p">:</span><span class="o">//</span><span class="n">git</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">sf</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">p</span><span class="o">/</span><span class="n">storagemanager</span><span class="o">/</span><span class="n">code</span> <span class="n">ssm</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">system</span><span class="o">-</span><span class="n">storage</span><span class="o">-</span><span class="n">manager</span><span class="o">/</span><span class="n">ssm</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
 </div>
 <span id="document-src/licence"></span><div class="section" id="licence">
 <h2>Licence<a class="headerlink" href="#licence" title="Permalink to this headline">¶</a></h2>
-<p>(C)2011 Red Hat, Inc., Lukas Czerner &lt;<a class="reference external" href="mailto:lczerner&#37;&#52;&#48;redhat&#46;com">lczerner<span>&#64;</span>redhat<span>&#46;</span>com</a>&gt;</p>
+<p>(C)2017 Red Hat, Inc., Jan Tulak &lt;<a class="reference external" href="mailto:jtulak&#37;&#52;&#48;redhat&#46;com">jtulak<span>&#64;</span>redhat<span>&#46;</span>com</a>&gt;
+(C)2011 Red Hat, Inc., Lukas Czerner &lt;<a class="reference external" href="mailto:lczerner&#37;&#52;&#48;redhat&#46;com">lczerner<span>&#64;</span>redhat<span>&#46;</span>com</a>&gt;</p>
 <p>This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 2 of the License, or
@@ -682,7 +682,7 @@ configuration.</dd>
 <span id="document-src/availability"></span><div class="section" id="availability">
 <h2>Availability<a class="headerlink" href="#availability" title="Permalink to this headline">¶</a></h2>
 <p><strong>System storage manager</strong> is available from
-<a class="reference external" href="http://storagemanager.sourceforge.net">http://storagemanager.sourceforge.net</a>. You can subscribe to
+<a class="reference external" href="http://system-storage-manager.github.io">http://system-storage-manager.github.io</a>. You can subscribe to
 <a class="reference external" href="mailto:storagemanager-devel&#37;&#52;&#48;lists&#46;sourceforge&#46;net">storagemanager-devel<span>&#64;</span>lists<span>&#46;</span>sourceforge<span>&#46;</span>net</a> to follow the current development.</p>
 </div>
 <span id="document-src/install"></span><div class="section" id="installation">
@@ -937,7 +937,7 @@ Storage Manager code, just checkout the git repository located on
 SourceForge. Please, base all of your work on the <code class="docutils literal"><span class="pre">devel</span></code> branch since
 it is more up-to-date and it will save us some work when merging your
 patches:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">branch</span> <span class="n">devel</span> <span class="n">git</span><span class="p">:</span><span class="o">//</span><span class="n">git</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">sf</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">p</span><span class="o">/</span><span class="n">storagemanager</span><span class="o">/</span><span class="n">code</span> <span class="n">storagemanager</span><span class="o">-</span><span class="n">code</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">branch</span> <span class="n">devel</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">system</span><span class="o">-</span><span class="n">storage</span><span class="o">-</span><span class="n">manager</span><span class="o">/</span><span class="n">ssm</span><span class="o">.</span><span class="n">git</span> <span class="n">storagemanager</span><span class="o">-</span><span class="n">code</span>
 </pre></div>
 </div>
 <p>Any form of contribution - patches, documentation, reviews or rants are
@@ -1134,7 +1134,7 @@ inlined in the email body. It is much better for review process.</li>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2015, Red Hat, Inc., LukÃ¡Å¡ Czerner &lt;lczerner@redhat.com&gt;.
+        &#169; Copyright 2015, Red Hat, Inc., Jan Å¤ulÃ¡k &lt;jtulak@redhat.com&gt;, LukÃ¡Å¡ Czerner &lt;lczerner@redhat.com&gt;.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
     </div>
   </body>
