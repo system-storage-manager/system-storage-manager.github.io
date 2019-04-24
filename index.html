@@ -1,44 +1,41 @@
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>System Storage Manager 1.1 documentation</title>
-    
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <title>System Storage Manager 1.4 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '',
-        VERSION:     '1.1',
+        URL_ROOT:    './',
+        VERSION:     '1.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="None" href="index.html#document-index" /> 
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
   </head>
   <body>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
-        <li><a href="index.html#document-index">System Storage Manager 1.1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html#document-index">System Storage Manager 1.4 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="system-storage-manager">
 <h1>System Storage Manager<a class="headerlink" href="#system-storage-manager" title="Permalink to this headline">¶</a></h1>
@@ -76,15 +73,16 @@ in general.</p>
 <span id="document-src/download"></span><div class="section" id="download">
 <h2>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h2>
 <p>You can get System Storage Manager from the git repository on GitHub project page <a class="reference external" href="https://github.com/system-storage-manager/ssm/releases/">https://github.com/system-storage-manager/ssm/releases/</a>. There are two
-branches: <tt class="docutils literal"><span class="pre">master</span></tt> which contains the stable release and <tt class="docutils literal"><span class="pre">devel</span></tt> where
-the development is happening. Once in a while the <tt class="docutils literal"><span class="pre">devel</span></tt> branch is
-merged into <tt class="docutils literal"><span class="pre">master</span></tt>, releasing new version of System Storage Manager.
-Obviously the <tt class="docutils literal"><span class="pre">devel</span></tt> branch is more up-to-date, however it might not be
-as stable as the <tt class="docutils literal"><span class="pre">master</span></tt> branch. System Storage Manager has its own
-regression testing suite, so we&#8217;re trying hard not to break things that
+branches: <code class="docutils literal"><span class="pre">master</span></code> which contains the stable release and <code class="docutils literal"><span class="pre">devel</span></code> where
+the development is happening. Once in a while the <code class="docutils literal"><span class="pre">devel</span></code> branch is
+merged into <code class="docutils literal"><span class="pre">master</span></code>, releasing new version of System Storage Manager.
+Obviously the <code class="docutils literal"><span class="pre">devel</span></code> branch is more up-to-date, however it might not be
+as stable as the <code class="docutils literal"><span class="pre">master</span></code> branch. System Storage Manager has its own
+regression testing suite, so we're trying hard not to break things that
 already work.</p>
-<p>You can check out the <tt class="docutils literal"><span class="pre">master</span></tt> branch of the git repository:</p>
-<div class="highlight-python"><pre>git clone https://github.com/system-storage-manager/ssm.git</pre>
+<p>You can check out the <code class="docutils literal"><span class="pre">master</span></code> branch of the git repository:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">system</span><span class="o">-</span><span class="n">storage</span><span class="o">-</span><span class="n">manager</span><span class="o">/</span><span class="n">ssm</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
 </div>
 </div>
 <span id="document-src/licence"></span><div class="section" id="licence">
@@ -104,8 +102,8 @@ along with this program.  If not, see &lt;<a class="reference external" href="ht
 </div>
 <span id="document-src/synopsis"></span><div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<p><strong>ssm</strong> [<strong>-h</strong>] [<strong>&#8211;version</strong>] [<strong>-v</strong>] [<strong>-f</strong>] [<strong>-b</strong> BACKEND] [<strong>-n</strong>] {check,resize,create,list,info,add,remove,snapshot,mount,migrate} ...</p>
-<p><strong>ssm</strong> <strong>create</strong> [<strong>-h</strong>] [<strong>-s</strong> SIZE] [<strong>-n</strong> NAME] [<strong>&#8211;fstype</strong> FSTYPE] [<strong>-r</strong> LEVEL] [<strong>-I</strong> STRIPESIZE] [<strong>-i</strong> STRIPES] [<strong>-p</strong> POOL] [<strong>-e</strong> [{luks,plain}]] [<strong>-o</strong> MNT_OPTIONS] [<strong>-v</strong> VIRTUAL_SIZE] [<strong>device</strong> [<strong>device</strong> ...]] [mount]</p>
+<p><strong>ssm</strong> [<strong>-h</strong>] [<strong>--version</strong>] [<strong>-v</strong>] [<strong>-v**v] [</strong>-v**vv] [<strong>-f</strong>] [<strong>-b</strong> BACKEND] [<strong>-n</strong>] {check,resize,create,list,info,add,remove,snapshot,mount,migrate} ...</p>
+<p><strong>ssm</strong> <strong>create</strong> [<strong>-h</strong>] [<strong>-s</strong> SIZE] [<strong>-n</strong> NAME] [<strong>--fstype</strong> FSTYPE] [<strong>-r</strong> LEVEL] [<strong>-I</strong> STRIPESIZE] [<strong>-i</strong> STRIPES] [<strong>-p</strong> POOL] [<strong>-e</strong> [{luks,plain}]] [<strong>-o</strong> MNT_OPTIONS] [<strong>-v</strong> VIRTUAL_SIZE] [<strong>device</strong> [<strong>device</strong> ...]] [mount]</p>
 <p><strong>ssm</strong> <strong>list</strong> [<strong>-h</strong>] [{volumes,vol,dev,devices,pool,pools,fs,filesystems,snap,snapshots}]</p>
 <p><strong>ssm</strong> <strong>info</strong> [<strong>-h</strong>] [item]</p>
 <p><strong>ssm</strong> <strong>remove</strong> [<strong>-h</strong>] [<strong>-a</strong>] [<strong>items</strong> [<strong>items</strong> ...]]</p>
@@ -127,10 +125,16 @@ along with this program.  If not, see &lt;<a class="reference external" href="ht
 <td>show this help message and exit</td></tr>
 <tr><td class="option-group">
 <kbd><span class="option">--version</span></kbd></td>
-<td>show program&#8217;s version number and exit</td></tr>
+<td>show program's version number and exit</td></tr>
 <tr><td class="option-group">
 <kbd><span class="option">-v</span>, <span class="option">--verbose</span></kbd></td>
 <td>Show aditional information while executing.</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-v<var>v</var></span></kbd></td>
+<td>Show yet more aditional information while executing.</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-v<var>vv</var></span></kbd></td>
+<td>Show yet more aditional information while executing.</td></tr>
 <tr><td class="option-group">
 <kbd><span class="option">-f</span>, <span class="option">--force</span></kbd></td>
 <td>Force execution in the case where ssm has some doubts
@@ -138,8 +142,8 @@ or questions.</td></tr>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-b <var>BACKEND</var></span>, <span class="option">--backend <var>BACKEND</var></span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Choose backend to use. Currently you can choose from
-(lvm,btrfs,crypt,multipath).</td></tr>
+<tr><td>&#160;</td><td>Choose backend to use. Currently you can choose from
+(lvm,btrfs,crypt).</td></tr>
 <tr><td class="option-group">
 <kbd><span class="option">-n</span>, <span class="option">--dry-run</span></kbd></td>
 <td>Dry run. Do not do anything, just parse the command
@@ -163,10 +167,10 @@ their own arguments, but global ssm arguments are propagated to all commands.</p
 </div>
 <span id="document-src/commands/create"></span><div class="section" id="create-command">
 <h3>Create command<a class="headerlink" href="#create-command" title="Permalink to this headline">¶</a></h3>
-<p><strong>ssm</strong> <strong>create</strong> [<strong>-h</strong>] [<strong>-s</strong> SIZE] [<strong>-n</strong> NAME] [<strong>&#8211;fstype</strong> FSTYPE] [<strong>-r</strong> LEVEL] [<strong>-I</strong> STRIPESIZE] [<strong>-i</strong> STRIPES] [<strong>-p</strong> POOL] [<strong>-e</strong> [{luks,plain}]] [<strong>-o</strong> MNT_OPTIONS] [<strong>-v</strong> VIRTUAL_SIZE] [<strong>device</strong> [<strong>device</strong> ...]] [mount]</p>
+<p><strong>ssm</strong> <strong>create</strong> [<strong>-h</strong>] [<strong>-s</strong> SIZE] [<strong>-n</strong> NAME] [<strong>--fstype</strong> FSTYPE] [<strong>-r</strong> LEVEL] [<strong>-I</strong> STRIPESIZE] [<strong>-i</strong> STRIPES] [<strong>-p</strong> POOL] [<strong>-e</strong> [{luks,plain}]] [<strong>-o</strong> MNT_OPTIONS] [<strong>-v</strong> VIRTUAL_SIZE] [<strong>device</strong> [<strong>device</strong> ...]] [mount]</p>
 <p>This command creates a new volume with defined parameters. If a <strong>device</strong> is
 provided it will be used to create the volume, hence it will be added into the
-<strong>pool</strong> prior to volume creation (See <a class="reference internal" href="index.html#add-command"><em>Add command section</em></a>). More than one device can be used to create a volume.</p>
+<strong>pool</strong> prior to volume creation (See <a class="reference internal" href="index.html#add-command"><span class="std std-ref">Add command section</span></a>). More than one device can be used to create a volume.</p>
 <p>If the <strong>device</strong> is already being used in a different pool, then <strong>ssm</strong> will
 ask you whether you want to remove it from the original pool. If you decline,
 or the removal fails, then the <strong>volume</strong> creation fails if the <em>SIZE</em> was not
@@ -174,14 +178,14 @@ provided. On the other hand, if the <em>SIZE</em> is provided and some devices c
 not be added to the <strong>pool</strong>, the volume creation might still succeed if there
 is enough space in the <strong>pool</strong>.</p>
 <p>In addition to specifying size of the volume directly, percentage can be
-specified as well. Specify <strong>&#8211;size 70%</strong> to indicate the volume size to be
+specified as well. Specify <strong>--size 70%</strong> to indicate the volume size to be
 70% of total pool size. Additionally, percentage of the used, or free pool
 space can be specified as well using keywords FREE, or USED respectively.</p>
 <p>The <em>POOL</em> name can be specified as well. If the pool exists, a new volume
 will be created from that pool (optionally adding <strong>device</strong> into the pool).
 However if the <em>POOL</em> does not exist, then <strong>ssm</strong> will attempt to create a
 new pool with the provided <strong>device</strong>, and then create a new volume from this
-pool. If the <strong>&#8211;backend</strong> argument is omitted, the default <strong>ssm</strong> backend
+pool. If the <strong>--backend</strong> argument is omitted, the default <strong>ssm</strong> backend
 will be used. The default backend is <em>lvm</em>.</p>
 <p><strong>ssm</strong> also supports creating a RAID configuration, however some back-ends
 might not support all RAID levels, or may not even support RAID at all. In
@@ -191,9 +195,9 @@ after it is created. However it will fail if mountable file system is not
 present on the volume.</p>
 <p>If the backend allows it (currently only supported with <strong>lvm</strong> backend),
 <strong>ssm</strong> can be used to create <strong>thinly provisioned volumes</strong> by specifying
-<strong>&#8211;virtual-size</strong> option. This will automatically create a <strong>thin pool</strong> of
-a given size provided with <strong>&#8211;size</strong> option and <strong>thin volume</strong> of a given
-size provided with <strong>&#8211;virtual-size</strong> option and name provided with <strong>&#8211;name</strong>
+<strong>--virtual-size</strong> option. This will automatically create a <strong>thin pool</strong> of
+a given size provided with <strong>--size</strong> option and <strong>thin volume</strong> of a given
+size provided with <strong>--virtual-size</strong> option and name provided with <strong>--name</strong>
 option. Virtual size can be much bigger than available space in the <strong>pool</strong>.</p>
 <table class="docutils option-list" frame="void" rules="none">
 <col class="option" />
@@ -205,9 +209,9 @@ option. Virtual size can be much bigger than available space in the <strong>pool
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-s <var>SIZE</var></span>, <span class="option">--size <var>SIZE</var></span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Gives the size to allocate for the new logical volume.
+<tr><td>&#160;</td><td>Gives the size to allocate for the new logical volume.
 A size suffix K|k, M|m, G|g, T|t, P|p, E|e can be used
-to define &#8216;power of two&#8217; units. If no unit is
+to define 'power of two' units. If no unit is
 provided, it defaults to kilobytes. This is optional
 and if not given, maximum possible size will be used.
 Additionally the new size can be specified as a
@@ -217,20 +221,20 @@ percentage of used pool space (50%USED).</td></tr>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-n <var>NAME</var></span>, <span class="option">--name <var>NAME</var></span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>The name for the new logical volume. This is optional
+<tr><td>&#160;</td><td>The name for the new logical volume. This is optional
 and if omitted, name will be generated by the
 corresponding backend.</td></tr>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">--fstype <var>FSTYPE</var></span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Gives the file system type to create on the new
+<tr><td>&#160;</td><td>Gives the file system type to create on the new
 logical volume. Supported file systems are (ext3,
 ext4, xfs, btrfs). This is optional and if not given
 file system will not be created.</td></tr>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-r <var>LEVEL</var></span>, <span class="option">--raid <var>LEVEL</var></span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Specify a RAID level you want to use when creating a
+<tr><td>&#160;</td><td>Specify a RAID level you want to use when creating a
 new volume. Note that some backends might not
 implement all supported RAID levels. This is optional
 and if no specified, linear volume will be created.
@@ -239,14 +243,14 @@ levels (0,1,10).</td></tr>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-I <var>STRIPESIZE</var></span>, <span class="option">--stripesize <var>STRIPESIZE</var></span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Gives the number of kilobytes for the granularity of
+<tr><td>&#160;</td><td>Gives the number of kilobytes for the granularity of
 stripes. This is optional and if not given, backend
 default will be used. Note that you have to specify
 RAID level as well.</td></tr>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-i <var>STRIPES</var></span>, <span class="option">--stripes <var>STRIPES</var></span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Gives the number of stripes. This is equal to the
+<tr><td>&#160;</td><td>Gives the number of stripes. This is equal to the
 number of physical volumes to scatter the logical
 volume. This is optional and if stripesize is set and
 multiple devices are provided stripes is determined
@@ -255,11 +259,11 @@ you have to specify RAID level as well.</td></tr>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-p <var>POOL</var></span>, <span class="option">--pool <var>POOL</var></span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Pool to use to create the new volume.</td></tr>
+<tr><td>&#160;</td><td>Pool to use to create the new volume.</td></tr>
 </tbody>
 </table>
 <dl class="docutils">
-<dt>-e [{luks,plain}], &#8211;encrypt [{luks,plain}]</dt>
+<dt>-e [{luks,plain}], --encrypt [{luks,plain}]</dt>
 <dd>Create encrpted volume. Extension to use can be
 specified.</dd>
 </dl>
@@ -270,15 +274,15 @@ specified.</dd>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-o <var>MNT_OPTIONS</var></span>, <span class="option">--mnt-options <var>MNT_OPTIONS</var></span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Mount options are specified with a -o flag followed by
+<tr><td>&#160;</td><td>Mount options are specified with a -o flag followed by
 a comma separated string of options. This option is
 equivalent to the -o mount(8) option.</td></tr>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-v <var>VIRTUAL_SIZE</var></span>, <span class="option">--virtual-size <var>VIRTUAL_SIZE</var></span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Gives the virtual size for the new thinly provisioned
+<tr><td>&#160;</td><td>Gives the virtual size for the new thinly provisioned
 volume. A size suffix K|k, M|m, G|g, T|t, P|p, E|e can
-be used to define &#8216;power of two&#8217; units. If no unit is
+be used to define 'power of two' units. If no unit is
 provided, it defaults to kilobytes.</td></tr>
 </tbody>
 </table>
@@ -384,7 +388,7 @@ ask you whether or not you want to remove it from the original pool.</p>
 <p>In some cases, the file system has to be mounted in order to resize. This will
 be handled by <strong>ssm</strong> automatically by mounting the <strong>volume</strong> temporarily.</p>
 <p>In addition to specifying new size of the volume directly, percentage can be
-specified as well. Specify <strong>&#8211;size 70%</strong> to resize the volume to 70% of it&#8217;s
+specified as well. Specify <strong>--size 70%</strong> to resize the volume to 70% of it's
 original size. Additionally, percentage of the used, or free pool space can
 be specified as well using keywords FREE, or USED respectively.</p>
 <p>Note that resizing btrfs subvolume is not supported, only the whole file
@@ -399,7 +403,7 @@ system can be resized.</p>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-s <var>SIZE</var></span>, <span class="option">--size <var>SIZE</var></span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>New size of the volume. With the + or - sign the value
+<tr><td>&#160;</td><td>New size of the volume. With the + or - sign the value
 is added to or subtracted from the actual size of the
 volume and without it, the value will be set as the
 new volume size. A size suffix of [k|K] for kilobytes,
@@ -440,7 +444,7 @@ back-end to which the <strong>volume</strong> belongs to does not support snapsh
 Note that you cannot specify both <em>NAME</em> and <em>DEST</em> since those options are
 mutually exclusive.</p>
 <p>In addition to specifying new size of the volume directly, percentage can be
-specified as well. Specify <strong>&#8211;size 70%</strong> to indicate the new snapshot size
+specified as well. Specify <strong>--size 70%</strong> to indicate the new snapshot size
 to be 70% of the origin volume size. Additionally, percentage of the used,
 or free pool space can be specified as well using keywords FREE, or USED
 respectively.</p>
@@ -457,9 +461,9 @@ the <strong>volume</strong>. This will be handled by <strong>ssm</strong> automa
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-s <var>SIZE</var></span>, <span class="option">--size <var>SIZE</var></span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Gives the size to allocate for the new snapshot
+<tr><td>&#160;</td><td>Gives the size to allocate for the new snapshot
 volume. A size suffix K|k, M|m, G|g, T|t, P|p, E|e can
-be used to define &#8216;power of two&#8217; units. If no unit is
+be used to define 'power of two' units. If no unit is
 provided, it defaults to kilobytes. This is optional
 and if not given, the size will be determined
 automatically. Additionally the new size can be
@@ -469,14 +473,14 @@ or as a percentage of used pool space (50%USED).</td></tr>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-d <var>DEST</var></span>, <span class="option">--dest <var>DEST</var></span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Destination of the snapshot specified with absolute
+<tr><td>&#160;</td><td>Destination of the snapshot specified with absolute
 path to be used for the new snapshot. This is optional
 and if not specified default backend policy will be
 performed.</td></tr>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-n <var>NAME</var></span>, <span class="option">--name <var>NAME</var></span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Name of the new snapshot. This is optional and if not
+<tr><td>&#160;</td><td>Name of the new snapshot. This is optional and if not
 specified default backend policy will be performed.</td></tr>
 </tbody>
 </table>
@@ -485,7 +489,7 @@ specified default backend policy will be performed.</td></tr>
 <span id="id1"></span><h3>Add command<a class="headerlink" href="#add-command" title="Permalink to this headline">¶</a></h3>
 <p><strong>ssm</strong> <strong>add</strong> [<strong>-h</strong>] [<strong>-p</strong> POOL] <strong>device</strong> [<strong>device</strong> ...]</p>
 <p>This command adds a <strong>device</strong> into the pool. By default, the <strong>device</strong> will
-not be added if it&#8217;s already a part of a different pool, but the user will be
+not be added if it's already a part of a different pool, but the user will be
 asked whether or not to remove the device from its pool. When multiple devices
 are provided, all of them are added into the pool. If one of the devices
 cannot be added into the pool for any reason, the add command will fail. If no
@@ -501,7 +505,7 @@ existing pool, it will be created using the provided devices.</p>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-p <var>POOL</var></span>, <span class="option">--pool <var>POOL</var></span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Pool to add device into. If not specified the default
+<tr><td>&#160;</td><td>Pool to add device into. If not specified the default
 pool is used.</td></tr>
 </tbody>
 </table>
@@ -514,7 +518,7 @@ pool is used.</td></tr>
 addition, one can also specify a <strong>volume</strong> in the format as it appears in the
 <strong>ssm list</strong> table.</p>
 <p>For example, instead of finding out what the device and subvolume id of the
-btrfs subvolume &#8220;btrfs_pool:vol001&#8221; is in order to mount it, one can simply
+btrfs subvolume &quot;btrfs_pool:vol001&quot; is in order to mount it, one can simply
 call <strong>ssm mount btrfs_pool:vol001 /mnt/test</strong>.</p>
 <p>One can also specify <em>OPTIONS</em> in the same way as with <strong>mount(8)</strong>.</p>
 <table class="docutils option-list" frame="void" rules="none">
@@ -527,7 +531,7 @@ call <strong>ssm mount btrfs_pool:vol001 /mnt/test</strong>.</p>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-o <var>OPTIONS</var></span>, <span class="option">--options <var>OPTIONS</var></span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Options are specified with a -o flag followed by a
+<tr><td>&#160;</td><td>Options are specified with a -o flag followed by a
 comma separated string of options. This option is
 equivalent to the same mount(8) option.</td></tr>
 </tbody>
@@ -562,10 +566,10 @@ can change metadata and an access to the data may be difficult.</p>
 <h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h3>
 <p>Ssm aims to create a unified user interface for various technologies like Device
 Mapper (dm), Btrfs file system, Multiple Devices (md) and possibly more. In
-order to do so we have a core abstraction layer in <tt class="docutils literal"><span class="pre">ssmlib/main.py</span></tt>. This
+order to do so we have a core abstraction layer in <code class="docutils literal"><span class="pre">ssmlib/main.py</span></code>. This
 abstraction layer should ideally know nothing about the underlying technology,
 but rather comply with <strong>device</strong>, <strong>pool</strong> and <strong>volume</strong> abstractions.</p>
-<p>Various backends can be registered in <tt class="docutils literal"><span class="pre">ssmlib/main.py</span></tt> in order to handle
+<p>Various backends can be registered in <code class="docutils literal"><span class="pre">ssmlib/main.py</span></code> in order to handle
 specific storage technology, implementing methods like <em>create</em>, <em>snapshot</em>, or
 <em>remove</em> volumes and pools. The core will then call these methods to manage
 the storage without needing to know what lies underneath it. There are already
@@ -591,7 +595,7 @@ name is <strong>btrfs_pool</strong>.</p>
 <p>When creating a new btrfs pool, the name of the pool is used as the file
 system label. If there is an already existing btrfs file system in the system
 without a label, a btrfs pool name will be generated for internal use in the
-following format &#8220;btrfs_{device base name}&#8221;.</p>
+following format &quot;btrfs_{device base name}&quot;.</p>
 <p class="last">A btrfs pool is created when the <strong>create</strong> or <strong>add</strong> command is used
 with specified devices and non existing pool name.</p>
 </dd>
@@ -605,7 +609,7 @@ create a new subvolume.</p>
 <p>The volume name is used as subvolume path in the btrfs file system and
 every object in this path must exist in order to create a volume. The volume
 name for internal tracking and that is visible to the user is generated in the
-format &#8220;{pool_name}:{volume name}&#8221;, but volumes can be also referenced by its
+format &quot;{pool_name}:{volume name}&quot;, but volumes can be also referenced by its
 mount point.</p>
 <p>The btrfs volumes are only shown in the <em>list</em> output, when the file system is
 mounted, with the exception of the main btrfs volume - the file system
@@ -642,7 +646,7 @@ The default lvm pool name is <strong>lvm_pool</strong>.</p>
 <p>An lvm pool is created when the <strong>create</strong> or <strong>add</strong> commands are used
 with specified devices and a non existing pool name.</p>
 <p class="last">Alternatively a <strong>thin pool</strong> can be created as a result of using
-<strong>&#8211;virtual-size</strong> option to create <strong>thin volume</strong>.</p>
+<strong>--virtual-size</strong> option to create <strong>thin volume</strong>.</p>
 </dd>
 <dt>volume</dt>
 <dd>An lvm volume is just a <em>logical volume</em> in lvm language. An lvm volume
@@ -650,7 +654,7 @@ can be created with the <strong>create</strong> command.</dd>
 <dt>snapshot</dt>
 <dd>Lvm volumes can be snapshotted as well. When a snapshot is created from
 the lvm volume, a new <em>snapshot</em> volume is created, which can be handled as
-any other lvm volume. Unlike <a class="reference internal" href="index.html#btrfs-backend"><em>btrfs</em></a> lvm is able
+any other lvm volume. Unlike <a class="reference internal" href="index.html#btrfs-backend"><span class="std std-ref">btrfs</span></a> lvm is able
 to distinguish snapshot from regular volume, so there is no need for a
 snapshot name to match special pattern.</dd>
 <dt>device</dt>
@@ -711,13 +715,13 @@ the future.</p>
 <dl class="docutils">
 <dt>SSM_DEFAULT_BACKEND</dt>
 <dd>Specify which backend will be used by default. This can be overridden by
-specifying the <strong>-b</strong> or <strong>&#8211;backend</strong> argument. Currently only <em>lvm</em> and
+specifying the <strong>-b</strong> or <strong>--backend</strong> argument. Currently only <em>lvm</em> and
 <em>btrfs</em> are supported.</dd>
 <dt>SSM_LVM_DEFAULT_POOL</dt>
-<dd>Name of the default lvm pool to be used if the <strong>-p</strong> or <strong>&#8211;pool</strong>
+<dd>Name of the default lvm pool to be used if the <strong>-p</strong> or <strong>--pool</strong>
 argument is omitted.</dd>
 <dt>SSM_BTRFS_DEFAULT_POOL</dt>
-<dd>Name of the default btrfs pool to be used if the <strong>-p</strong> or <strong>&#8211;pool</strong>
+<dd>Name of the default btrfs pool to be used if the <strong>-p</strong> or <strong>--pool</strong>
 argument is omitted.</dd>
 <dt>SSM_PREFIX_FILTER</dt>
 <dd>When this is set, <strong>ssm</strong> will filter out all devices, volumes and pools
@@ -735,14 +739,15 @@ configuration.</dd>
 <span id="document-src/install"></span><div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>To install System Storage Manager into your system simply run:</p>
-<div class="highlight-python"><pre>python setup.py install</pre>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
+</pre></div>
 </div>
 <p>as root in the System Storage Manager directory. Make sure that your system
-configuration meets the <a class="reference internal" href="index.html#ssm-requirements"><em>requirements</em></a> in order for ssm
+configuration meets the <a class="reference internal" href="index.html#ssm-requirements"><span class="std std-ref">requirements</span></a> in order for ssm
 to work correctly.</p>
 <p>Note that you can run <strong>ssm</strong> even without installation by using the local
 sources with:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="nb">bin</span><span class="o">/</span><span class="n">ssm</span><span class="o">.</span><span class="n">local</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">bin</span><span class="o">/</span><span class="n">ssm</span><span class="o">.</span><span class="n">local</span>
 </pre></div>
 </div>
 </div>
@@ -825,155 +830,159 @@ without these tools installed is not supported by SSM.</p>
 <span id="document-src/examples"></span><div class="section" id="quick-examples">
 <span id="id1"></span><h2>Quick examples<a class="headerlink" href="#quick-examples" title="Permalink to this headline">¶</a></h2>
 <p>List system storage:</p>
-<div class="highlight-python"><pre># ssm list
-----------------------------------
-Device          Total  Mount point
-----------------------------------
-/dev/loop0    5.00 GB
-/dev/loop1    5.00 GB
-/dev/loop2    5.00 GB
-/dev/loop3    5.00 GB
-/dev/loop4    5.00 GB
-/dev/sda    149.05 GB  PARTITIONED
-/dev/sda1    19.53 GB  /
-/dev/sda2    78.12 GB
-/dev/sda3     1.95 GB  SWAP
-/dev/sda4     1.00 KB
-/dev/sda5    49.44 GB  /mnt/test
-----------------------------------
-------------------------------------------------------------------------------
-Volume     Pool      Volume size  FS     FS size      Free  Type   Mount point
-------------------------------------------------------------------------------
-/dev/dm-0  dm-crypt     78.12 GB  ext4  78.12 GB  45.01 GB  crypt  /home
-/dev/sda1               19.53 GB  ext4  19.53 GB  12.67 GB  part   /
-/dev/sda5               49.44 GB  ext4  49.44 GB  29.77 GB  part   /mnt/test
-------------------------------------------------------------------------------</pre>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># ssm list</span>
+<span class="o">----------------------------------</span>
+<span class="n">Device</span>          <span class="n">Total</span>  <span class="n">Mount</span> <span class="n">point</span>
+<span class="o">----------------------------------</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">loop0</span>    <span class="mf">5.00</span> <span class="n">GB</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">loop1</span>    <span class="mf">5.00</span> <span class="n">GB</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">loop2</span>    <span class="mf">5.00</span> <span class="n">GB</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">loop3</span>    <span class="mf">5.00</span> <span class="n">GB</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">loop4</span>    <span class="mf">5.00</span> <span class="n">GB</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda</span>    <span class="mf">149.05</span> <span class="n">GB</span>  <span class="n">PARTITIONED</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda1</span>    <span class="mf">19.53</span> <span class="n">GB</span>  <span class="o">/</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda2</span>    <span class="mf">78.12</span> <span class="n">GB</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda3</span>     <span class="mf">1.95</span> <span class="n">GB</span>  <span class="n">SWAP</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda4</span>     <span class="mf">1.00</span> <span class="n">KB</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda5</span>    <span class="mf">49.44</span> <span class="n">GB</span>  <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">test</span>
+<span class="o">----------------------------------</span>
+<span class="o">------------------------------------------------------------------------------</span>
+<span class="n">Volume</span>     <span class="n">Pool</span>      <span class="n">Volume</span> <span class="n">size</span>  <span class="n">FS</span>     <span class="n">FS</span> <span class="n">size</span>      <span class="n">Free</span>  <span class="n">Type</span>   <span class="n">Mount</span> <span class="n">point</span>
+<span class="o">------------------------------------------------------------------------------</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">dm</span><span class="o">-</span><span class="mi">0</span>  <span class="n">dm</span><span class="o">-</span><span class="n">crypt</span>     <span class="mf">78.12</span> <span class="n">GB</span>  <span class="n">ext4</span>  <span class="mf">78.12</span> <span class="n">GB</span>  <span class="mf">45.01</span> <span class="n">GB</span>  <span class="n">crypt</span>  <span class="o">/</span><span class="n">home</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda1</span>               <span class="mf">19.53</span> <span class="n">GB</span>  <span class="n">ext4</span>  <span class="mf">19.53</span> <span class="n">GB</span>  <span class="mf">12.67</span> <span class="n">GB</span>  <span class="n">part</span>   <span class="o">/</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda5</span>               <span class="mf">49.44</span> <span class="n">GB</span>  <span class="n">ext4</span>  <span class="mf">49.44</span> <span class="n">GB</span>  <span class="mf">29.77</span> <span class="n">GB</span>  <span class="n">part</span>   <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">test</span>
+<span class="o">------------------------------------------------------------------------------</span>
+</pre></div>
 </div>
 <p>Create a volume of the defined size with the defined file system. The default
 back-end is set to lvm and the lvm default pool name (volume group) is lvm_pool:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c"># ssm create --fs ext4 -s 15G /dev/loop0 /dev/loop1</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># ssm create --fs ext4 -s 15G /dev/loop0 /dev/loop1</span>
 </pre></div>
 </div>
-<p>The name of the new volume is &#8216;/dev/lvm_pool/lvol001&#8217;. Resize the volume
+<p>The name of the new volume is '/dev/lvm_pool/lvol001'. Resize the volume
 to 10GB:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c"># ssm resize -s-5G /dev/lvm_pool/lvol001</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># ssm resize -s-5G /dev/lvm_pool/lvol001</span>
 </pre></div>
 </div>
 <p>Resize the volume to 100G, but it may require adding more devices into the
 pool:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c"># ssm resize -s 100G /dev/lvm_pool/lvol001 /dev/loop2</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># ssm resize -s 100G /dev/lvm_pool/lvol001 /dev/loop2</span>
 </pre></div>
 </div>
-<p>Now we can try to create a new lvm volume named &#8216;myvolume&#8217; from the remaining pool
+<p>Now we can try to create a new lvm volume named 'myvolume' from the remaining pool
 space with the xfs file system and mount it to /mnt/test1:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c"># ssm create --fs xfs --name myvolume /mnt/test1</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># ssm create --fs xfs --name myvolume /mnt/test1</span>
 </pre></div>
 </div>
 <p>List all volumes with file systems:</p>
-<div class="highlight-python"><pre># ssm list filesystems
------------------------------------------------------------------------------------------------
-Volume                  Pool        Volume size  FS      FS size      Free  Type    Mount point
------------------------------------------------------------------------------------------------
-/dev/lvm_pool/lvol001   lvm_pool       25.00 GB  ext4   25.00 GB  23.19 GB  linear
-/dev/lvm_pool/myvolume  lvm_pool        4.99 GB  xfs     4.98 GB   4.98 GB  linear  /mnt/test1
-/dev/dm-0               dm-crypt       78.12 GB  ext4   78.12 GB  45.33 GB  crypt   /home
-/dev/sda1                              19.53 GB  ext4   19.53 GB  12.67 GB  part    /
-/dev/sda5                              49.44 GB  ext4   49.44 GB  29.77 GB  part    /mnt/test
------------------------------------------------------------------------------------------------</pre>
-</div>
-<p>You can then easily remove the old volume with:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c"># ssm remove /dev/lvm_pool/lvol001</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># ssm list filesystems</span>
+<span class="o">-----------------------------------------------------------------------------------------------</span>
+<span class="n">Volume</span>                  <span class="n">Pool</span>        <span class="n">Volume</span> <span class="n">size</span>  <span class="n">FS</span>      <span class="n">FS</span> <span class="n">size</span>      <span class="n">Free</span>  <span class="n">Type</span>    <span class="n">Mount</span> <span class="n">point</span>
+<span class="o">-----------------------------------------------------------------------------------------------</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">lvm_pool</span><span class="o">/</span><span class="n">lvol001</span>   <span class="n">lvm_pool</span>       <span class="mf">25.00</span> <span class="n">GB</span>  <span class="n">ext4</span>   <span class="mf">25.00</span> <span class="n">GB</span>  <span class="mf">23.19</span> <span class="n">GB</span>  <span class="n">linear</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">lvm_pool</span><span class="o">/</span><span class="n">myvolume</span>  <span class="n">lvm_pool</span>        <span class="mf">4.99</span> <span class="n">GB</span>  <span class="n">xfs</span>     <span class="mf">4.98</span> <span class="n">GB</span>   <span class="mf">4.98</span> <span class="n">GB</span>  <span class="n">linear</span>  <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">test1</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">dm</span><span class="o">-</span><span class="mi">0</span>               <span class="n">dm</span><span class="o">-</span><span class="n">crypt</span>       <span class="mf">78.12</span> <span class="n">GB</span>  <span class="n">ext4</span>   <span class="mf">78.12</span> <span class="n">GB</span>  <span class="mf">45.33</span> <span class="n">GB</span>  <span class="n">crypt</span>   <span class="o">/</span><span class="n">home</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda1</span>                              <span class="mf">19.53</span> <span class="n">GB</span>  <span class="n">ext4</span>   <span class="mf">19.53</span> <span class="n">GB</span>  <span class="mf">12.67</span> <span class="n">GB</span>  <span class="n">part</span>    <span class="o">/</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda5</span>                              <span class="mf">49.44</span> <span class="n">GB</span>  <span class="n">ext4</span>   <span class="mf">49.44</span> <span class="n">GB</span>  <span class="mf">29.77</span> <span class="n">GB</span>  <span class="n">part</span>    <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">test</span>
+<span class="o">-----------------------------------------------------------------------------------------------</span>
 </pre></div>
 </div>
-<p>Now let&#8217;s try to create a btrfs volume. Btrfs is a separate backend, not just a
+<p>You can then easily remove the old volume with:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># ssm remove /dev/lvm_pool/lvol001</span>
+</pre></div>
+</div>
+<p>Now let's try to create a btrfs volume. Btrfs is a separate backend, not just a
 file system. That is because btrfs itself has an integrated volume manager.
 The default btrfs pool name is btrfs_pool.:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c"># ssm -b btrfs create /dev/loop3 /dev/loop4</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># ssm -b btrfs create /dev/loop3 /dev/loop4</span>
 </pre></div>
 </div>
 <p>Now we create btrfs subvolumes. Note that the btrfs file system has to be mounted
 in order to create subvolumes. However ssm will handle this for you.:</p>
-<div class="highlight-python"><pre># ssm create -p btrfs_pool
-# ssm create -n new_subvolume -p btrfs_pool
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># ssm create -p btrfs_pool</span>
+<span class="c1"># ssm create -n new_subvolume -p btrfs_pool</span>
 
 
-# ssm list filesystems
------------------------------------------------------------------
-Device         Free      Used      Total  Pool        Mount point
------------------------------------------------------------------
-/dev/loop0  0.00 KB  10.00 GB   10.00 GB  lvm_pool
-/dev/loop1  0.00 KB  10.00 GB   10.00 GB  lvm_pool
-/dev/loop2  0.00 KB  10.00 GB   10.00 GB  lvm_pool
-/dev/loop3  8.05 GB   1.95 GB   10.00 GB  btrfs_pool
-/dev/loop4  6.54 GB   1.93 GB    8.47 GB  btrfs_pool
-/dev/sda                       149.05 GB              PARTITIONED
-/dev/sda1                       19.53 GB              /
-/dev/sda2                       78.12 GB
-/dev/sda3                        1.95 GB              SWAP
-/dev/sda4                        1.00 KB
-/dev/sda5                       49.44 GB              /mnt/test
------------------------------------------------------------------
--------------------------------------------------------
-Pool        Type   Devices     Free      Used     Total
--------------------------------------------------------
-lvm_pool    lvm    3        0.00 KB  29.99 GB  29.99 GB
-btrfs_pool  btrfs  2        3.84 MB  18.47 GB  18.47 GB
--------------------------------------------------------
------------------------------------------------------------------------------------------------
-Volume                  Pool        Volume size  FS      FS size      Free  Type    Mount point
------------------------------------------------------------------------------------------------
-/dev/lvm_pool/lvol001   lvm_pool       25.00 GB  ext4   25.00 GB  23.19 GB  linear
-/dev/lvm_pool/myvolume  lvm_pool        4.99 GB  xfs     4.98 GB   4.98 GB  linear  /mnt/test1
-/dev/dm-0               dm-crypt       78.12 GB  ext4   78.12 GB  45.33 GB  crypt   /home
-btrfs_pool              btrfs_pool     18.47 GB  btrfs  18.47 GB  18.47 GB  btrfs
-/dev/sda1                              19.53 GB  ext4   19.53 GB  12.67 GB  part    /
-/dev/sda5                              49.44 GB  ext4   49.44 GB  29.77 GB  part    /mnt/test
------------------------------------------------------------------------------------------------</pre>
+<span class="c1"># ssm list filesystems</span>
+<span class="o">-----------------------------------------------------------------</span>
+<span class="n">Device</span>         <span class="n">Free</span>      <span class="n">Used</span>      <span class="n">Total</span>  <span class="n">Pool</span>        <span class="n">Mount</span> <span class="n">point</span>
+<span class="o">-----------------------------------------------------------------</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">loop0</span>  <span class="mf">0.00</span> <span class="n">KB</span>  <span class="mf">10.00</span> <span class="n">GB</span>   <span class="mf">10.00</span> <span class="n">GB</span>  <span class="n">lvm_pool</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">loop1</span>  <span class="mf">0.00</span> <span class="n">KB</span>  <span class="mf">10.00</span> <span class="n">GB</span>   <span class="mf">10.00</span> <span class="n">GB</span>  <span class="n">lvm_pool</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">loop2</span>  <span class="mf">0.00</span> <span class="n">KB</span>  <span class="mf">10.00</span> <span class="n">GB</span>   <span class="mf">10.00</span> <span class="n">GB</span>  <span class="n">lvm_pool</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">loop3</span>  <span class="mf">8.05</span> <span class="n">GB</span>   <span class="mf">1.95</span> <span class="n">GB</span>   <span class="mf">10.00</span> <span class="n">GB</span>  <span class="n">btrfs_pool</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">loop4</span>  <span class="mf">6.54</span> <span class="n">GB</span>   <span class="mf">1.93</span> <span class="n">GB</span>    <span class="mf">8.47</span> <span class="n">GB</span>  <span class="n">btrfs_pool</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda</span>                       <span class="mf">149.05</span> <span class="n">GB</span>              <span class="n">PARTITIONED</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda1</span>                       <span class="mf">19.53</span> <span class="n">GB</span>              <span class="o">/</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda2</span>                       <span class="mf">78.12</span> <span class="n">GB</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda3</span>                        <span class="mf">1.95</span> <span class="n">GB</span>              <span class="n">SWAP</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda4</span>                        <span class="mf">1.00</span> <span class="n">KB</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda5</span>                       <span class="mf">49.44</span> <span class="n">GB</span>              <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">test</span>
+<span class="o">-----------------------------------------------------------------</span>
+<span class="o">-------------------------------------------------------</span>
+<span class="n">Pool</span>        <span class="n">Type</span>   <span class="n">Devices</span>     <span class="n">Free</span>      <span class="n">Used</span>     <span class="n">Total</span>
+<span class="o">-------------------------------------------------------</span>
+<span class="n">lvm_pool</span>    <span class="n">lvm</span>    <span class="mi">3</span>        <span class="mf">0.00</span> <span class="n">KB</span>  <span class="mf">29.99</span> <span class="n">GB</span>  <span class="mf">29.99</span> <span class="n">GB</span>
+<span class="n">btrfs_pool</span>  <span class="n">btrfs</span>  <span class="mi">2</span>        <span class="mf">3.84</span> <span class="n">MB</span>  <span class="mf">18.47</span> <span class="n">GB</span>  <span class="mf">18.47</span> <span class="n">GB</span>
+<span class="o">-------------------------------------------------------</span>
+<span class="o">-----------------------------------------------------------------------------------------------</span>
+<span class="n">Volume</span>                  <span class="n">Pool</span>        <span class="n">Volume</span> <span class="n">size</span>  <span class="n">FS</span>      <span class="n">FS</span> <span class="n">size</span>      <span class="n">Free</span>  <span class="n">Type</span>    <span class="n">Mount</span> <span class="n">point</span>
+<span class="o">-----------------------------------------------------------------------------------------------</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">lvm_pool</span><span class="o">/</span><span class="n">lvol001</span>   <span class="n">lvm_pool</span>       <span class="mf">25.00</span> <span class="n">GB</span>  <span class="n">ext4</span>   <span class="mf">25.00</span> <span class="n">GB</span>  <span class="mf">23.19</span> <span class="n">GB</span>  <span class="n">linear</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">lvm_pool</span><span class="o">/</span><span class="n">myvolume</span>  <span class="n">lvm_pool</span>        <span class="mf">4.99</span> <span class="n">GB</span>  <span class="n">xfs</span>     <span class="mf">4.98</span> <span class="n">GB</span>   <span class="mf">4.98</span> <span class="n">GB</span>  <span class="n">linear</span>  <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">test1</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">dm</span><span class="o">-</span><span class="mi">0</span>               <span class="n">dm</span><span class="o">-</span><span class="n">crypt</span>       <span class="mf">78.12</span> <span class="n">GB</span>  <span class="n">ext4</span>   <span class="mf">78.12</span> <span class="n">GB</span>  <span class="mf">45.33</span> <span class="n">GB</span>  <span class="n">crypt</span>   <span class="o">/</span><span class="n">home</span>
+<span class="n">btrfs_pool</span>              <span class="n">btrfs_pool</span>     <span class="mf">18.47</span> <span class="n">GB</span>  <span class="n">btrfs</span>  <span class="mf">18.47</span> <span class="n">GB</span>  <span class="mf">18.47</span> <span class="n">GB</span>  <span class="n">btrfs</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda1</span>                              <span class="mf">19.53</span> <span class="n">GB</span>  <span class="n">ext4</span>   <span class="mf">19.53</span> <span class="n">GB</span>  <span class="mf">12.67</span> <span class="n">GB</span>  <span class="n">part</span>    <span class="o">/</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda5</span>                              <span class="mf">49.44</span> <span class="n">GB</span>  <span class="n">ext4</span>   <span class="mf">49.44</span> <span class="n">GB</span>  <span class="mf">29.77</span> <span class="n">GB</span>  <span class="n">part</span>    <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">test</span>
+<span class="o">-----------------------------------------------------------------------------------------------</span>
+</pre></div>
 </div>
-<p>Now let&#8217;s free up some of the loop devices so that we can try to add them into
-the btrfs_pool. So we&#8217;ll simply remove lvm myvolume and resize lvol001 so we
+<p>Now let's free up some of the loop devices so that we can try to add them into
+the btrfs_pool. So we'll simply remove lvm myvolume and resize lvol001 so we
 can remove /dev/loop2. Note that myvolume is mounted so we have to unmount it
 first.:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c"># umount /mnt/test1</span>
-<span class="c"># ssm remove /dev/lvm_pool/myvolume</span>
-<span class="c"># ssm resize -s-10G /dev/lvm_pool/lvol001</span>
-<span class="c"># ssm remove /dev/loop2</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># umount /mnt/test1</span>
+<span class="c1"># ssm remove /dev/lvm_pool/myvolume</span>
+<span class="c1"># ssm resize -s-10G /dev/lvm_pool/lvol001</span>
+<span class="c1"># ssm remove /dev/loop2</span>
 </pre></div>
 </div>
 <p>Add device to the btrfs file system:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c"># ssm add /dev/loop2 -p btrfs_pool</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># ssm add /dev/loop2 -p btrfs_pool</span>
 </pre></div>
 </div>
-<p>Now let&#8217;s see what happened. Note that to actually see btrfs subvolumes you have to
+<p>Now let's see what happened. Note that to actually see btrfs subvolumes you have to
 mount the file system first:</p>
-<div class="highlight-python"><pre># mount -L btrfs_pool /mnt/test1/
-# ssm list volumes
-------------------------------------------------------------------------------------------------------------------------
-Volume                         Pool        Volume size  FS      FS size      Free  Type    Mount point
-------------------------------------------------------------------------------------------------------------------------
-/dev/lvm_pool/lvol001          lvm_pool       15.00 GB  ext4   15.00 GB  13.85 GB  linear
-/dev/dm-0                      dm-crypt       78.12 GB  ext4   78.12 GB  45.33 GB  crypt   /home
-btrfs_pool                     btrfs_pool     28.47 GB  btrfs  28.47 GB  28.47 GB  btrfs   /mnt/test1
-btrfs_pool:2012-05-09-T113426  btrfs_pool     28.47 GB  btrfs  28.47 GB  28.47 GB  btrfs   /mnt/test1/2012-05-09-T113426
-btrfs_pool:new_subvolume       btrfs_pool     28.47 GB  btrfs  28.47 GB  28.47 GB  btrfs   /mnt/test1/new_subvolume
-/dev/sda1                                     19.53 GB  ext4   19.53 GB  12.67 GB  part    /
-/dev/sda5                                     49.44 GB  ext4   49.44 GB  29.77 GB  part    /mnt/test
-------------------------------------------------------------------------------------------------------------------------</pre>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># mount -L btrfs_pool /mnt/test1/</span>
+<span class="c1"># ssm list volumes</span>
+<span class="o">------------------------------------------------------------------------------------------------------------------------</span>
+<span class="n">Volume</span>                         <span class="n">Pool</span>        <span class="n">Volume</span> <span class="n">size</span>  <span class="n">FS</span>      <span class="n">FS</span> <span class="n">size</span>      <span class="n">Free</span>  <span class="n">Type</span>    <span class="n">Mount</span> <span class="n">point</span>
+<span class="o">------------------------------------------------------------------------------------------------------------------------</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">lvm_pool</span><span class="o">/</span><span class="n">lvol001</span>          <span class="n">lvm_pool</span>       <span class="mf">15.00</span> <span class="n">GB</span>  <span class="n">ext4</span>   <span class="mf">15.00</span> <span class="n">GB</span>  <span class="mf">13.85</span> <span class="n">GB</span>  <span class="n">linear</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">dm</span><span class="o">-</span><span class="mi">0</span>                      <span class="n">dm</span><span class="o">-</span><span class="n">crypt</span>       <span class="mf">78.12</span> <span class="n">GB</span>  <span class="n">ext4</span>   <span class="mf">78.12</span> <span class="n">GB</span>  <span class="mf">45.33</span> <span class="n">GB</span>  <span class="n">crypt</span>   <span class="o">/</span><span class="n">home</span>
+<span class="n">btrfs_pool</span>                     <span class="n">btrfs_pool</span>     <span class="mf">28.47</span> <span class="n">GB</span>  <span class="n">btrfs</span>  <span class="mf">28.47</span> <span class="n">GB</span>  <span class="mf">28.47</span> <span class="n">GB</span>  <span class="n">btrfs</span>   <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">test1</span>
+<span class="n">btrfs_pool</span><span class="p">:</span><span class="mi">2012</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="n">T113426</span>  <span class="n">btrfs_pool</span>     <span class="mf">28.47</span> <span class="n">GB</span>  <span class="n">btrfs</span>  <span class="mf">28.47</span> <span class="n">GB</span>  <span class="mf">28.47</span> <span class="n">GB</span>  <span class="n">btrfs</span>   <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">test1</span><span class="o">/</span><span class="mi">2012</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="n">T113426</span>
+<span class="n">btrfs_pool</span><span class="p">:</span><span class="n">new_subvolume</span>       <span class="n">btrfs_pool</span>     <span class="mf">28.47</span> <span class="n">GB</span>  <span class="n">btrfs</span>  <span class="mf">28.47</span> <span class="n">GB</span>  <span class="mf">28.47</span> <span class="n">GB</span>  <span class="n">btrfs</span>   <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">test1</span><span class="o">/</span><span class="n">new_subvolume</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda1</span>                                     <span class="mf">19.53</span> <span class="n">GB</span>  <span class="n">ext4</span>   <span class="mf">19.53</span> <span class="n">GB</span>  <span class="mf">12.67</span> <span class="n">GB</span>  <span class="n">part</span>    <span class="o">/</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda5</span>                                     <span class="mf">49.44</span> <span class="n">GB</span>  <span class="n">ext4</span>   <span class="mf">49.44</span> <span class="n">GB</span>  <span class="mf">29.77</span> <span class="n">GB</span>  <span class="n">part</span>    <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">test</span>
+<span class="o">------------------------------------------------------------------------------------------------------------------------</span>
+</pre></div>
 </div>
 <p>Remove the whole lvm pool, one of the btrfs subvolumes, and one unused device
 from the btrfs pool btrfs_loop3. Note that with btrfs, pools have the same
 name as their volumes:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c"># ssm remove lvm_pool /dev/loop2 /mnt/test1/new_subvolume/</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># ssm remove lvm_pool /dev/loop2 /mnt/test1/new_subvolume/</span>
 </pre></div>
 </div>
 <p>Snapshots can also be done with ssm:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c"># ssm snapshot btrfs_pool</span>
-<span class="c"># ssm snapshot -n btrfs_snapshot btrfs_pool</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># ssm snapshot btrfs_pool</span>
+<span class="c1"># ssm snapshot -n btrfs_snapshot btrfs_pool</span>
 </pre></div>
 </div>
 <p>With lvm, you can also create snapshots:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c"># ssm create -s 10G /dev/loop[01]</span>
-<span class="c"># ssm snapshot /dev/lvm_pool/lvol001</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># ssm create -s 10G /dev/loop[01]</span>
+<span class="c1"># ssm snapshot /dev/lvm_pool/lvol001</span>
 </pre></div>
 </div>
 <p>Now list all snapshots. Note that btrfs snapshots are actually just subvolumes
@@ -982,51 +991,54 @@ way to distinguish between those. ssm is using a little trick to search for
 name patterns to recognize snapshots, so if you specify your own name for the
 snapshot, ssm will not recognize it as snapshot, but rather as regular volume
 (subvolume). This problem does not exist with lvm.:</p>
-<div class="highlight-python"><pre># ssm list snapshots
--------------------------------------------------------------------------------------------------------------
-Snapshot                            Origin   Volume size     Size  Type    Mount point
--------------------------------------------------------------------------------------------------------------
-/dev/lvm_pool/snap20120509T121611   lvol001      2.00 GB  0.00 KB  linear
-btrfs_pool:snap-2012-05-09-T121313              18.47 GB           btrfs   /mnt/test1/snap-2012-05-09-T121313
--------------------------------------------------------------------------------------------------------------</pre>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># ssm list snapshots</span>
+<span class="o">-------------------------------------------------------------------------------------------------------------</span>
+<span class="n">Snapshot</span>                            <span class="n">Origin</span>   <span class="n">Volume</span> <span class="n">size</span>     <span class="n">Size</span>  <span class="n">Type</span>    <span class="n">Mount</span> <span class="n">point</span>
+<span class="o">-------------------------------------------------------------------------------------------------------------</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">lvm_pool</span><span class="o">/</span><span class="n">snap20120509T121611</span>   <span class="n">lvol001</span>      <span class="mf">2.00</span> <span class="n">GB</span>  <span class="mf">0.00</span> <span class="n">KB</span>  <span class="n">linear</span>
+<span class="n">btrfs_pool</span><span class="p">:</span><span class="n">snap</span><span class="o">-</span><span class="mi">2012</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="n">T121313</span>              <span class="mf">18.47</span> <span class="n">GB</span>           <span class="n">btrfs</span>   <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">test1</span><span class="o">/</span><span class="n">snap</span><span class="o">-</span><span class="mi">2012</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="n">T121313</span>
+<span class="o">-------------------------------------------------------------------------------------------------------------</span>
+</pre></div>
 </div>
 </div>
 <span id="document-src/for_developers"></span><div class="section" id="for-developers">
 <span id="id1"></span><h2>For developers<a class="headerlink" href="#for-developers" title="Permalink to this headline">¶</a></h2>
-<p>We are accepting patches! If you&#8217;re interested in contributing to the System
+<p>We are accepting patches! If you're interested in contributing to the System
 Storage Manager code, just checkout the git repository located on
-SourceForge. Please, base all of your work on the <tt class="docutils literal"><span class="pre">devel</span></tt> branch since
+SourceForge. Please, base all of your work on the <code class="docutils literal"><span class="pre">devel</span></code> branch since
 it is more up-to-date and it will save us some work when merging your
 patches:</p>
-<div class="highlight-python"><pre>git clone --branch devel git@github.com:system-storage-manager/ssm.git storagemanager-code</pre>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">branch</span> <span class="n">devel</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">system</span><span class="o">-</span><span class="n">storage</span><span class="o">-</span><span class="n">manager</span><span class="o">/</span><span class="n">ssm</span><span class="o">.</span><span class="n">git</span> <span class="n">storagemanager</span><span class="o">-</span><span class="n">code</span>
+</pre></div>
 </div>
 <p>Any form of contribution - patches, documentation, reviews or rants are
-appreciated. See <a class="reference internal" href="index.html#mailing-list"><em>Mailing list section</em></a> section.</p>
+appreciated. See <a class="reference internal" href="#mailing-list"><span class="std std-ref">Mailing list section</span></a> section.</p>
 <div class="section" id="tests">
 <span id="test-section"></span><h3>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h3>
 <p>System Storage Manager contains a regression testing suite to make sure that we
 do not break things that should already work. We recommend that every developer
 run these tests before sending patches:</p>
-<div class="highlight-python"><pre>python test.py</pre>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">test</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
 </div>
 <p>Tests in System Storage Manager are divided into four levels.</p>
 <ol class="arabic">
 <li><p class="first">First the doctest is executed.</p>
 </li>
-<li><p class="first">Then we have unittests in <tt class="docutils literal"><span class="pre">tests/unittests/test_ssm.py</span></tt> which is testing
-the core of ssm <tt class="docutils literal"><span class="pre">ssmlib/main.py</span></tt>. It is checking for basic things like
+<li><p class="first">Then we have unittests in <code class="docutils literal"><span class="pre">tests/unittests/test_ssm.py</span></code> which is testing
+the core of ssm <code class="docutils literal"><span class="pre">ssmlib/main.py</span></code>. It is checking for basic things like
 required backend methods and variables, flag propagations, proper class
 initialization and finally whether commands actually result in the proper
 backend callbacks. It does not require root permissions and it does not
 touch your system configuration in any way. It actually should not invoke
-any shell command, and if it does it&#8217;s a bug.</p>
+any shell command, and if it does it's a bug.</p>
 </li>
 <li><p class="first">Second part of unittests is backend testing. We are mainly testing whether
 ssm commands result in proper backend operations. It does not require root
 permissions and it does not touch your system configuration in any way. It
-actually should not invoke any shell command and if it does it&#8217;s a bug.</p>
+actually should not invoke any shell command and if it does it's a bug.</p>
 </li>
-<li><p class="first">And finally there are real bash tests located in <tt class="docutils literal"><span class="pre">tests/bashtests</span></tt>. Bash
+<li><p class="first">And finally there are real bash tests located in <code class="docutils literal"><span class="pre">tests/bashtests</span></code>. Bash
 tests are divided into files. Each file tests one command for one backend
 and it contains a series of test cases followed by checks as to whether the
 command created the expected result. In order to test real system commands we
@@ -1041,7 +1053,7 @@ existing system configuration, each device, pool and volume name includes a
 special prefix, and the SSM_PREFIX_FILTER environment variable is set to make
 <strong>ssm</strong> to exclude all items which does not match this special prefix.</p>
 <p>The standard place for temporary files is within SSM tests directory.
-However, if for some reason you don&#8217;t want/can&#8217;t use this location, set
+However, if for some reason you don't want/can't use this location, set
 the SSM_TEST_DIR environment variable to any other path.</p>
 <p>Even though we tried hard to make sure that the bash tests do not change
 your system configuration, we recommend you <strong>not</strong> to run tests with root
@@ -1055,30 +1067,30 @@ break it unintentionally.</p>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
 <p class="last">Please, make sure to run full tests before you send a patch to the
-mailing list. To do so, simply run <tt class="docutils literal"><span class="pre">python</span> <span class="pre">test.py</span></tt> as root on
+mailing list. To do so, simply run <code class="docutils literal"><span class="pre">python</span> <span class="pre">test.py</span></code> as root on
 your test machine.</p>
 </div>
 </div>
 <div class="section" id="documentation">
 <span id="documentation-section"></span><h3>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h3>
-<p>System Storage Manager documentation is stored in the <tt class="docutils literal"><span class="pre">doc/</span></tt> directory. The
+<p>System Storage Manager documentation is stored in the <code class="docutils literal"><span class="pre">doc/</span></code> directory. The
 documentation is built using <strong>sphinx</strong> software which helps us not to
 duplicate text for different types of documentation (man page, html pages,
 readme). If you are going to modify documentation, please make sure not to
 modify manual page, html pages or README directly, but rather modify the
-<tt class="docutils literal"><span class="pre">doc/*.rst</span></tt> and <tt class="docutils literal"><span class="pre">doc/src/*.rst</span></tt> files accordingly so that the change is
+<code class="docutils literal"><span class="pre">doc/*.rst</span></code> and <code class="docutils literal"><span class="pre">doc/src/*.rst</span></code> files accordingly so that the change is
 propagated to all documents.</p>
 <p>Moreover, parts of the documentation such as <em>synopsis</em> or ssm command
 <em>options</em> are parsed directly from the ssm help output. This means that when
-you&#8217;re going to add or change arguments into <strong>ssm</strong> the only thing you have
-to do is to add or change it in the <tt class="docutils literal"><span class="pre">ssmlib/main.py</span></tt> source code and then
-run <tt class="docutils literal"><span class="pre">make</span> <span class="pre">dist</span></tt> in the <tt class="docutils literal"><span class="pre">doc/</span></tt> directory and all the documents should be
+you're going to add or change arguments into <strong>ssm</strong> the only thing you have
+to do is to add or change it in the <code class="docutils literal"><span class="pre">ssmlib/main.py</span></code> source code and then
+run <code class="docutils literal"><span class="pre">make</span> <span class="pre">dist</span></code> in the <code class="docutils literal"><span class="pre">doc/</span></code> directory and all the documents should be
 updated automatically.</p>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
 <p class="last">Please make sure you update the documentation when you add or change
 <strong>ssm</strong> functionality if the format of the change requires it. Then
-regenerate all the documents using <tt class="docutils literal"><span class="pre">make</span> <span class="pre">dist</span></tt> and include changes
+regenerate all the documents using <code class="docutils literal"><span class="pre">make</span> <span class="pre">dist</span></code> and include changes
 in the patch.</p>
 </div>
 </div>
@@ -1097,28 +1109,28 @@ your questions there as well.</p>
 <div class="section" id="posting-patches">
 <h3>Posting patches<a class="headerlink" href="#posting-patches" title="Permalink to this headline">¶</a></h3>
 <p>As already mentioned, we are accepting patches! And we are very happy for every
-contribution. If you&#8217;re going to send a patch in, please make sure to follow
+contribution. If you're going to send a patch in, please make sure to follow
 some simple rules:</p>
 <ol class="arabic simple">
-<li>Before you&#8217;re going to post a patch, please run our regression testing suite
-to make sure that your change does not break someone else&#8217;s work. See
-<a class="reference internal" href="index.html#test-section"><em>Tests section</em></a></li>
-<li>If you&#8217;re making a change that might require documentation update, please
-update the documentation as well. See <a class="reference internal" href="index.html#documentation-section"><em>Documentation section</em></a></li>
+<li>Before you're going to post a patch, please run our regression testing suite
+to make sure that your change does not break someone else's work. See
+<a class="reference internal" href="#test-section"><span class="std std-ref">Tests section</span></a></li>
+<li>If you're making a change that might require documentation update, please
+update the documentation as well. See <a class="reference internal" href="#documentation-section"><span class="std std-ref">Documentation section</span></a></li>
 <li>Make sure your patch has all the requisites such as a <em>short description</em>
 preferably 50 characters long at max describing the main idea of the change.
 <em>Long description</em> describing what was changed with and why and finally
 Signed-off-by tag.</li>
 <li>The preferred way of accepting patches is through pull requests on GitHub,
-but it is possible to send them to the mailing list if you don&#8217;t have GitHub
+but it is possible to send them to the mailing list if you don't have GitHub
 account.</li>
-<li>If you&#8217;re going to send a patch to the mailing list, please send the patch
+<li>If you're going to send a patch to the mailing list, please send the patch
 inlined in the email body. It is much better for review process.</li>
 </ol>
 <div class="admonition hint">
 <p class="first admonition-title">Hint</p>
-<p class="last">You can use <strong>git</strong> to do all the work for you. <tt class="docutils literal"><span class="pre">git</span> <span class="pre">format-patch</span></tt> and
-<tt class="docutils literal"><span class="pre">git</span> <span class="pre">send-email</span></tt> will help you with creating and sending the patch to the
+<p class="last">You can use <strong>git</strong> to do all the work for you. <code class="docutils literal"><span class="pre">git</span> <span class="pre">format-patch</span></code> and
+<code class="docutils literal"><span class="pre">git</span> <span class="pre">send-email</span></code> will help you with creating and sending the patch to the
 mailing list.</p>
 </div>
 </div>
@@ -1128,7 +1140,7 @@ mailing list.</p>
 <div class="section" id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
 </ul>
 </div>
 
@@ -1136,7 +1148,7 @@ mailing list.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html#document-index">Table Of Contents</a></h3>
   <ul>
@@ -1190,32 +1202,19 @@ mailing list.</p>
 </li>
 </ul>
 
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
-        <li><a href="index.html#document-index">System Storage Manager 1.1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html#document-index">System Storage Manager 1.4 documentation</a> &#187;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, Red Hat, Inc., Jan Å¤ulÃ¡k &lt;jtulak@redhat.com&gt;, LukÃ¡Å¡ Czerner &lt;lczerner@redhat.com&gt;.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2015, Red Hat, Inc., Jan Å¤ulÃ¡k &lt;jtulak@redhat.com&gt;, LukÃ¡Å¡ Czerner &lt;lczerner@redhat.com&gt;.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.6.
     </div>
   </body>
 </html>
